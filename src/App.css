@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&family=Roboto&family=Roboto+Condensed&family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background-color: #020230;
+  font-family: "Roboto" sans-serif;
+}
+
+.playscreen {
+  width: 80vw;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("https://imgk.timesnownews.com/story/Screenshot_746.png?tr=w-1200,h-900")
+      center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.timer {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-size: 2.5rem;
+  border: 3px solid #fff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  background-color: #020230;
+}
+
+.ques-ans {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.question {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 2px solid #fff;
+  border-radius: 70px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(19, 10, 97, 1) 91%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.answers {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.ans {
+  font-size: 1.5rem;
+  border: 2px solid #fff;
+  padding: 1rem;
+  width: 29.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgba(23, 7, 167, 1) 0%,
+    rgba(12, 12, 66, 0.9699230033810399) 100%
+  );
+  cursor: pointer;
+  border-radius: 60px;
+}
+.ans:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 196, 0, 1) 100%
+  );
+}
+
+.ans.correct {
+  background-color: green;
+  animation: correct 5s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
   }
-  to {
-    transform: rotate(360deg);
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(
+      0deg,
+      rgba(23, 7, 167, 1) 0%,
+      rgba(12, 12, 66, 0.9699230033810399) 100%
+    );
   }
+  62%,
+  100% {
+    background: green;
+  }
+}
+
+.ans.wrong {
+  animation: wrong 5s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(
+      0deg,
+      rgba(23, 7, 167, 1) 0%,
+      rgba(12, 12, 66, 0.9699230033810399) 100%
+    );
+  }
+  62%,
+  100% {
+    background: red;
+  }
+}
+
+.money {
+  width: 20vw;
+}
+
+.money ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+.money li {
+  width: 70%;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.money .active {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(29, 167, 29, 0.9699230033810399) 100%
+  );
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.gameover {
+  height: 100vh;
+  font-size: 5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
