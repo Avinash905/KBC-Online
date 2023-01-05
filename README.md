@@ -3,7 +3,7 @@
 <h3>Description :</h3> 
 This is an online version of the game show KBC.
 
-👉[Click here](https://Avinash905.github.io/ZenStore) to check out the app.
+👉[Click here](https://Avinash905.github.io/KBC-Online) to check out the app.
 <br/>
 
 ### 📃Features :
