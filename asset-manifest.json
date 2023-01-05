@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/KBC-Online/static/css/main.3ac12de2.css",
+    "main.js": "/KBC-Online/static/js/main.4d01a8e5.js",
+    "static/js/845.1e598915.chunk.js": "/KBC-Online/static/js/845.1e598915.chunk.js",
+    "static/media/wait.mp3": "/KBC-Online/static/media/wait.30e329da76ae665702f7.mp3",
+    "static/media/play.mp3": "/KBC-Online/static/media/play.8e5f6d1d81d4e1414b95.mp3",
+    "static/media/correct.mp3": "/KBC-Online/static/media/correct.160572d72c858155072e.mp3",
+    "static/media/wrong.mp3": "/KBC-Online/static/media/wrong.e946821894ae9b0a0d6f.mp3",
+    "index.html": "/KBC-Online/index.html",
+    "main.3ac12de2.css.map": "/KBC-Online/static/css/main.3ac12de2.css.map",
+    "main.4d01a8e5.js.map": "/KBC-Online/static/js/main.4d01a8e5.js.map",
+    "845.1e598915.chunk.js.map": "/KBC-Online/static/js/845.1e598915.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ac12de2.css",
+    "static/js/main.4d01a8e5.js"
+  ]
+}
