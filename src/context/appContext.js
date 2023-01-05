@@ -58,7 +58,7 @@ export default function AppProvider({ children }) {
         dispatch({ type: "CHANGE_QUESTION_ID" });
         correctSoundPlay();
         dispatch({ type: "START_TIMER", payload: 30 });
-      }, 1000);
+      }, 4000);
     } else {
       ele.classList.add("wrong");
       state.ques >= 1
@@ -78,6 +78,7 @@ export default function AppProvider({ children }) {
   };
 
   useEffect(() => {
+    gameWait();
     if (state.time === 0) {
       state.ques >= 1
         ? dispatch({
@@ -99,7 +100,11 @@ export default function AppProvider({ children }) {
     return () => {
       clearInterval(decTimer);
     };
-  }, [state.time]);
+  }, [state.time, state.money, state.ques]);
+
+  useEffect(() => {
+    gamePlay();
+  }, []);
 
   return (
     <AppContext.Provider
